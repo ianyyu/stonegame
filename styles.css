@@ -1,0 +1,61 @@
+body {
+	font-family: Arial, sans-serif;
+	text-align: center;
+}
+#game {
+	display: inline-block;
+	margin-top: 20px;
+}
+.row {
+	clear: both;
+	height: 30px;
+}
+.cell {
+	width: 30px;
+	height: 30px;
+	float: left;
+	border: 1px solid #ccc;
+	line-height: 30px;
+	font-size: 24px;
+	text-align: center;
+	/* Added to ensure scaling occurs from the center */
+	transform-origin: center center;
+}
+.wall {
+	background-color: #333;
+}
+#controls {
+	margin-top: 20px;
+}
+#controls button {
+	width: 60px;
+	height: 60px;
+	font-size: 24px;
+}
+#up,
+#down {
+	display: block;
+	margin: 5px auto;
+}
+#left,
+#right {
+	display: inline-block;
+	margin: 0 20px;
+}
+
+/* New CSS for animating the player's emoji */
+@keyframes breathing {
+	0% {
+		transform: scale(1);
+	}
+	50% {
+		transform: scale(1.1);
+	}
+	100% {
+		transform: scale(1);
+	}
+}
+
+.player {
+	animation: breathing 1s infinite;
+}
